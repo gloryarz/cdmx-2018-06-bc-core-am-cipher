@@ -4,10 +4,27 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
   </head>
   <body>
     <div id="root"></div>
-    <script src="cipher.js"></script>
+      <div class="field">
+        <h1 class="txt">Descifra tus mensajes</h1>
+        <form>
+          <h3 class="txt">Escribe tu mensaje aquí</h3>
+          <input type="text"  class="button" name="" value="" placeholder="Escribe tu texto" id="txt"><br>
+          <h3 class="txt">Escribe tu número aquí</h3>
+          <input type="text"  class="button" name="" value="" placeholder="Número" id="num"> <br>
+          <input type="button" class="button" name="" value=" Cifrar" onclick="cipher()">
+          <input type="button"  class="button" name="" value="Descifrar" onclick="decode()">
+        </form>
+      </div>
+
+      <div class="divi" id="imprimir">
+
+      </div>
+
+  <!--  <script src="cipher.js"></script>-->
     <script src="index.js"></script>
   </body>
 </html>
