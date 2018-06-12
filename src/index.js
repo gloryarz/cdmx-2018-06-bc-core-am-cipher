@@ -1,25 +1,36 @@
-// Div de mi HTML en el que se imprime el cifrado/descifrado
 let imprimir = document.getElementById('imprimir');
 
-// Funcion para cifrar
-const  cipher = (offsets, strings) => {
+const  encode = (offset, string) => {
   // variables para guardar los valores insertados en HTML
   let txt = document.getElementById('txt');
-  strings = (txt.value).toUpperCase();
+  string = (txt.value);
   num = document.getElementById("num");
-  offsets = parseInt(num.value);
+  offset = parseInt(num.value);
   // variable vacía para resultado
   let cifrado = " ";
+  let devuelve = "";
+  let valorAscii ="";
+  let conversion = 0;
 
-  /* Loop toma los valores insertados por el usuario, repite el código
-  según el largo de la palabra, hace la conversión al código ASCII, suma offsets
-  regresa el valor convertido.
-  */
-  for (let i = 0; i < strings.length; i++) {
-    let valorAscii = strings.toUpperCase().charCodeAt(i);
-    let conversion = (valorAscii - 65 + offsets) % 26 + 65;
-    let devuelve = String.fromCharCode (conversion);
-    cifrado += devuelve;
+  for (let i = 0; i < string.length; i++) {
+    valorAscii = string.charCodeAt(i);
+    if (valorAscii >= 97 && valorAscii <= 122) {
+      conversion = (valorAscii - 97 + offset) % 26 + 97;
+      devuelve = String.fromCharCode (conversion);
+      cifrado += devuelve;
+    }
+
+    else if (valorAscii >= 65 && valorAscii <= 90) {
+      conversion = (valorAscii - 65 + offset) % 26 + 65;
+      devuelve = String.fromCharCode (conversion);
+      cifrado += devuelve;
+    }
+
+    else {
+      conversion = valorAscii;
+      devuelve = String.fromCharCode (conversion);
+      cifrado += devuelve;
+    }
 
   }
   console.log(cifrado);
@@ -27,25 +38,37 @@ const  cipher = (offsets, strings) => {
   imprimir.innerHTML = cifrado;
 }
 
-// Funcion para descifrar
-const  decode = (offsets, strings) => {
+const  decode = (offset, string) => {
   // variables para guardar los valores insertados en HTML
   let txt = document.getElementById('txt');
-  strings = (txt.value).toUpperCase();
+  string = (txt.value);
   num = document.getElementById("num");
-  offsets = parseInt(num.value);
+  offset = parseInt(num.value);
+  // variable vacía para resultado
   let cifrado = " ";
+  let devuelve = "";
+  let valorAscii ="";
+  let conversion = 0;
 
+  for (let i = 0; i < string.length; i++) {
+    valorAscii = string.charCodeAt(i);
+    if (valorAscii >= 97 && valorAscii <= 122) {
+      conversion = (valorAscii - 122 - offset) % 26 + 122;
+      devuelve = String.fromCharCode (conversion);
+      cifrado += devuelve;
+    }
 
-  /* Loop toma los valores insertados por el usuario, repite el código
-  según el largo de la palabra, hace la conversión al código ASCII, suma offsets
-  regresa el valor convertido.
-  */
-  for (let i = 0; i < strings.length; i++) {
-    let valorAscii = strings.toUpperCase().charCodeAt(i);
-    let conversion = (valorAscii + 65 - offsets) % 26 + 65;
-    let devuelve = String.fromCharCode (conversion);
-    cifrado += devuelve;
+    else if (valorAscii >= 65 && valorAscii <= 90) {
+      conversion = (valorAscii + 65 - offset) % 26 + 65;
+      devuelve = String.fromCharCode (conversion);
+      cifrado += devuelve;
+    }
+
+    else {
+      conversion = valorAscii;
+      devuelve = String.fromCharCode (conversion);
+      cifrado += devuelve;
+    }
 
   }
   console.log(cifrado);
