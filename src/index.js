@@ -1,5 +1,5 @@
 let imprimir = document.getElementById('imprimir');
-
+/*
 const  encode = (offset, string) => {
   // variables para guardar los valores insertados en HTML
   let txt = document.getElementById('txt');
@@ -36,8 +36,8 @@ const  encode = (offset, string) => {
   console.log(cifrado);
   // Imprime en el HTML
   imprimir.innerHTML = cifrado;
-}
-
+}*/
+/*
 const  decode = (offset, string) => {
   // variables para guardar los valores insertados en HTML
   let txt = document.getElementById('txt');
@@ -74,4 +74,4 @@ const  decode = (offset, string) => {
   console.log(cifrado);
   // Imprime en el HTML
   imprimir.innerHTML = cifrado;
-}
+}*/
