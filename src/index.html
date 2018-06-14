@@ -5,15 +5,24 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div id="root"></div>
+
+    <div class="row">
+      <div class="col-12">
+        <h1 class="txt"> CAESAR CIPHER</h1>
+        <hr>
+        <h3>Este programa te ayudará a cifrar y descifrar mensajes, sólo tienes
+          que introducir un mensaje, un número y presionar cifar o descifar</h3>
+      </div>
+    </div>
       <div class="field">
-        <h1 class="txt">Descifra tus mensajes</h1>
         <form>
-          <h3 class="txt">Escribe tu mensaje aquí</h3>
+          <!--<h3 class="txt">Escribe tu mensaje aquí</h3>-->
           <input type="text"  class="button" name="" value="" placeholder="Escribe tu texto" id="txt"><br>
-          <h3 class="txt">Escribe tu número aquí</h3>
+          <!--<h3 class="txt">Escribe tu número aquí</h3>-->
           <input type="text"  class="button" name="" value="" placeholder="Número" id="num"> <br>
           <input type="button" class="button" name="" value=" Cifrar" onclick="cipher.encode()">
           <input type="button"  class="button" name="" value="Descifrar" onclick="cipher.decode()">
