@@ -33,6 +33,7 @@ window.cipher = {
 
     }
     console.log(cifrado);
+
     // Imprime en el HTML
     imprimir.innerHTML = cifrado;
   },
