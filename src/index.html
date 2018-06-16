@@ -3,78 +3,58 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100|Sunflower:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|Montserrat:400,500" rel="stylesheet">
   </head>
   <body>
-    <div class="row">
-    <div class="col-6 col-s-12 ">...
-      <div class="row ">
-        <div class="col-1 ">
-        </div>
-        <div class="col-3 center ">
-          <h1> CAESAR<br> <span class="color">CIPHER</span></h1>
-        </div>
-        <div class="col-1 ">
-          <hr>
-        </div>
-        <div class="col-6 center ">
-          <h3>Este programa te ayudará a cifrar y descifrar mensajes,
-            sólo tienes que introducir un mensaje, un número y presionar cifrar
-          o descifrar</h3>
-        </div>
-        <div class="col-1 ">
-        </div>
-
-
-      </div> <!--row-->
-      <div class="row">
-        <div class="col-1">
-        </div>
-        <div class="col-10">
-            <form>
-              <!--<h3 class="txt">Escribe tu mensaje aquí</h3>-->
-              <input type="text"  class="txt" name="" value="" placeholder="Escribe tu texto" id="txt"><br>
-              <!--<h3 class="txt">Escribe tu número aquí</h3>-->
-              <input type="text"  class="size" name="" value="" placeholder="#" id="num">
-              <input type="button" class="button size" name="" value=" Cifrar" onclick="cipher.encode()">
-              <input type="button"  class="button size" name="" value="Descifrar" onclick="cipher.decode()">
-            </form>
-        </div>
-        <div class="col-1">
-        </div>
-      </div>
-
-
-    </div> <!--col-6 col-s-12 -->
-
-
-
-
-    <div class="col-6 col-s-12  ">
-      <div class="row">
-
-        <div class="col-11 " >
-          <section class="oculto">
-
-          </section>
-
-          <div class="cont"></div>
-          <div id="imprimir">
-
+    <div class="container-fluid">
+        <div class="row justify-content-center mt-4"> <!-- Encabezado-->
+          <div class="col-lg-3 col-10">
+              <header class="party">
+              </header>
           </div>
-        </div>
+          <div class="col-lg-1">
+             <hr>
+          </div>
+          <div class="col-lg-5 col-8 blue">
+            <h3>Este programa te ayudará a cifrar y descifrar mensajes,
+              sólo tienes que introducir un mensaje, un número y presionar cifrar
+            o descifrar</h3>
+          </div>
+        </div> <!-- Encabezado-->
 
-        <div class="col-1 ">
-        </div>
+      <div class="row text-center justify-content-center"> <!-- Des/Cifrado-->
+        <div class="col-lg-6 col-10  margin"> <!-- Bloque 1-->
+          <div class="row justify-content-center"> <!-- Inputs-->
+            <div class="col-lg-10 col-10">
+              <form>
+                <input type="text"  class="txt" name="" value="" placeholder="Escribe tu texto" id="txt"><br>
+                <input type="text"  class="size" name="" value="" placeholder="#" id="num">
+                <input type="button" class="button size" name="" value=" Cifrar" onclick="cipher.encode()">
+                <input type="button"  class="button size" name="" value="Descifrar" onclick="cipher.decode()">
+              </form>
+            </div>
+          </div> <!-- Inputs-->
 
-      </div>
+
+        </div> <!-- Bloque 1-->
 
 
-    </div> <!--col-6 col-s-12 -->
-  </div> <!--main row-->
 
+        <div class="col-lg-6"> <!-- Bloque 2-->
+          <div class="row text-center justify-content-center">
+            <div id="imprimir" class="col-lg-8 col-8 txt mt-4">
+
+            </div>
+          </div>
+
+        </div> <!-- Bloque 2-->
+
+      </div> <!-- Des/Cifrado-->
+
+
+  </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
