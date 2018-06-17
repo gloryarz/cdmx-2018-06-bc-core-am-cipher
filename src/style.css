@@ -54,6 +54,24 @@
     width: 100%;
     height: auto;
 }
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.button {
+
+}
+
+.button:hover {
+    background-color: rgba(78, 69, 225, 0.5);
+    color: white;
+    box-shadow: 1rem;
+}
+
+
+
+
 @media only screen and (max-width: 500px) {
     /* For tablets: */
     .col-s-1 {width: 8.33%;}
@@ -72,6 +90,22 @@
     body {
       background-color: blue;
     }
+
+    h3{
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    h1 {
+      font-family: 'Sunflower', sans-serif;
+      font-size: 250%;
+      line-height: 75%;
+      text-align: center;
+      padding: 0px;
+      color: rgb(78, 69, 225);
+
+    }
+
 
 } /*@media only screen and (max-width: 500px)*/
 
@@ -92,9 +126,7 @@
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 
-    body {
-      font-family: 'Raleway', sans-serif;
-    }
+
 
     .lie {
       background-color: blue;
@@ -102,14 +134,12 @@
     }
 
 
-
     hr {
-
     border: none;
     border-left: .3rem solid rgb(78, 69, 225);
     height: 8rem;
-
     }
+
 
     h3{
       text-align: left;
