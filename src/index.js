@@ -12,3 +12,10 @@ const prueba = () => {
   let traeTexto = document.getElementById('txt');
 
 }*/
+
+
+let encodeBtn = document.getElementById("encodeBtn");
+encodeBtn.addEventListener("click", cipher.encode);
+
+let decodeBtn = document.getElementById("decodeBtn");
+decodeBtn.addEventListener("click", cipher.decode);
