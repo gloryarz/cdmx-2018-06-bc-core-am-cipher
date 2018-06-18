@@ -1,18 +1,28 @@
 let imprimir = document.getElementById('imprimir');
+
+// Guardar los valores insertados en HTML
 /*
-if (window.attachEvent){
-  document.getElementById('encodeBtn').addEventListener("click, btn1, false")
-} else if (window.attachEvent) {
+const encoder = (offset, string) => {
+  let txt = document.getElementById('txt');
+  string = (txt.value);
+  num = document.getElementById("num");
+  offset = parseInt(num.value);
+  imprimir.innerHTML = cipher.encode();
 
 }
 
 
 
-const prueba = () => {
-  let traeTexto = document.getElementById('txt');
-
-}*/
-
+// Junta las funciones del DOM, Des/Cifrado
+const decoder = () => {
+  let txt = document.getElementById('txt');
+  string = (txt.value);
+  num = document.getElementById("num");
+  offset = parseInt(num.value);
+  console.log(offset, string);
+  imprimir.innerHTML = cipher.decode();
+}
+*/
 
 let encodeBtn = document.getElementById("encodeBtn");
 encodeBtn.addEventListener("click", cipher.encode);

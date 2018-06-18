@@ -1,6 +1,6 @@
 window.cipher = {
   encode : (offset, string) => {
-    // variables para guardar los valores insertados en HTML
+    //Valores de texto
     let txt = document.getElementById('txt');
     string = (txt.value);
     num = document.getElementById("num");
@@ -33,9 +33,10 @@ window.cipher = {
 
     }
     console.log(cifrado);
+    //return cifrado;
+    imprimir.innerHTML = cifrado;
 
     // Imprime en el HTML
-    imprimir.innerHTML = cifrado;
   },
 
   decode : (offset, string) => {
