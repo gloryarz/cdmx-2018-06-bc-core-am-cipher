@@ -34,9 +34,10 @@ window.cipher = {
     }
     console.log(cifrado);
     //return cifrado;
+    // Imprime en el HTML
     imprimir.innerHTML = cifrado;
 
-    // Imprime en el HTML
+
   },
 
   decode : (offset, string) => {
